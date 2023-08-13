@@ -33,3 +33,19 @@ MarbastLib is required to have the MX switch footprints.
 ![PCB_Model_Front.png](./Images/PCB_Model_Front.png)
 ![PCB.png](./Images/PCB.png)
 ![Schematic.png](./Images/Schematic.png)
+
+## Firmware
+
+This keyboard supports QMK and Vial. Both files can be found in the `Firmware` directory, `default` for regular QMK, and `vial` for the Vial firmware.
+
+These firmwares can be flashed using the QMK Toolbox. 
+
+The QMK firmware has ASCII art for the keyboard layouts, for ease of editing.
+
+![ASCIIRep.png](Images/ASCIIRep.png)
+
+### Flashing QMK Firmware
+Add the `default` keymap, info JSON, and rules file into a directory named `leaf40` under `keyboards` in your QMK directory. Then, compile using `qmk compile -kb leaf40 -km default`. Flash using QMK Toolbox.
+
+### Flashing Vial Firmware
+Add the `vial` keymap, info JSON, and rules file into a directory named `leaf40` under `keyboards` in your Vial directory. Then, compile using `make leaf40:vial` in your `vial-qmk` directory. Flash using QMK Toolbox.
